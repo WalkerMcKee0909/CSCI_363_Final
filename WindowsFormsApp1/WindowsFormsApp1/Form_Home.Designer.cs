@@ -39,6 +39,8 @@ namespace WindowsFormsApp1
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.Add = new System.Windows.Forms.Button();
+            this.EditButton = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -98,8 +100,47 @@ namespace WindowsFormsApp1
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.MAR = new System.Windows.Forms.TabPage();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.EditButton = new System.Windows.Forms.Button();
-            this.Add = new System.Windows.Forms.Button();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
+            this.label35 = new System.Windows.Forms.Label();
+            this.Continuous = new System.Windows.Forms.TabPage();
+            this.PRNTab = new System.Windows.Forms.TabPage();
+            this.Scheduled = new System.Windows.Forms.TabPage();
+            this.GV_MARScheduled = new System.Windows.Forms.DataGridView();
+            this.PRN = new System.Windows.Forms.TabControl();
+            this.Action = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RN_Initials = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Date_Given = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Time_Given = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Tab_Home.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -115,6 +156,16 @@ namespace WindowsFormsApp1
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.MAR.SuspendLayout();
+            this.panel9.SuspendLayout();
+            this.panel10.SuspendLayout();
+            this.Continuous.SuspendLayout();
+            this.PRNTab.SuspendLayout();
+            this.Scheduled.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.GV_MARScheduled)).BeginInit();
+            this.PRN.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // Tab_Home
@@ -215,6 +266,26 @@ namespace WindowsFormsApp1
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Summary";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // Add
+            // 
+            this.Add.Location = new System.Drawing.Point(1402, 24);
+            this.Add.Name = "Add";
+            this.Add.Size = new System.Drawing.Size(115, 48);
+            this.Add.TabIndex = 11;
+            this.Add.Text = "Add";
+            this.Add.UseVisualStyleBackColor = true;
+            this.Add.Click += new System.EventHandler(this.Add_Click);
+            // 
+            // EditButton
+            // 
+            this.EditButton.Location = new System.Drawing.Point(1539, 24);
+            this.EditButton.Name = "EditButton";
+            this.EditButton.Size = new System.Drawing.Size(115, 48);
+            this.EditButton.TabIndex = 10;
+            this.EditButton.Text = "Edit";
+            this.EditButton.UseVisualStyleBackColor = true;
+            this.EditButton.Click += new System.EventHandler(this.button1_Click);
             // 
             // tabControl1
             // 
@@ -832,6 +903,13 @@ namespace WindowsFormsApp1
             // 
             // MAR
             // 
+            this.MAR.Controls.Add(this.PRN);
+            this.MAR.Controls.Add(this.panel9);
+            this.MAR.Controls.Add(this.panel10);
+            this.MAR.Controls.Add(this.label32);
+            this.MAR.Controls.Add(this.label33);
+            this.MAR.Controls.Add(this.label34);
+            this.MAR.Controls.Add(this.label35);
             this.MAR.Location = new System.Drawing.Point(4, 27);
             this.MAR.Name = "MAR";
             this.MAR.Padding = new System.Windows.Forms.Padding(3);
@@ -840,25 +918,383 @@ namespace WindowsFormsApp1
             this.MAR.Text = "MAR";
             this.MAR.UseVisualStyleBackColor = true;
             // 
-            // EditButton
+            // panel9
             // 
-            this.EditButton.Location = new System.Drawing.Point(1539, 24);
-            this.EditButton.Name = "EditButton";
-            this.EditButton.Size = new System.Drawing.Size(115, 48);
-            this.EditButton.TabIndex = 10;
-            this.EditButton.Text = "Edit";
-            this.EditButton.UseVisualStyleBackColor = true;
-            this.EditButton.Click += new System.EventHandler(this.button1_Click);
+            this.panel9.Controls.Add(this.label12);
+            this.panel9.Controls.Add(this.label13);
+            this.panel9.Controls.Add(this.label14);
+            this.panel9.Controls.Add(this.label15);
+            this.panel9.Location = new System.Drawing.Point(479, 61);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(619, 24);
+            this.panel9.TabIndex = 17;
             // 
-            // Add
+            // label12
             // 
-            this.Add.Location = new System.Drawing.Point(1402, 24);
-            this.Add.Name = "Add";
-            this.Add.Size = new System.Drawing.Size(115, 48);
-            this.Add.TabIndex = 11;
-            this.Add.Text = "Add";
-            this.Add.UseVisualStyleBackColor = true;
-            this.Add.Click += new System.EventHandler(this.Add_Click);
+            this.label12.AutoSize = true;
+            this.label12.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label12.Location = new System.Drawing.Point(473, 0);
+            this.label12.Name = "label12";
+            this.label12.Padding = new System.Windows.Forms.Padding(17, 0, 0, 0);
+            this.label12.Size = new System.Drawing.Size(147, 18);
+            this.label12.TabIndex = 8;
+            this.label12.Text = "Height: 168 cm";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label13.Location = new System.Drawing.Point(294, 0);
+            this.label13.Name = "label13";
+            this.label13.Padding = new System.Windows.Forms.Padding(17, 0, 0, 0);
+            this.label13.Size = new System.Drawing.Size(179, 18);
+            this.label13.TabIndex = 5;
+            this.label13.Text = "Isolation: Standard";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label14.Location = new System.Drawing.Point(161, 0);
+            this.label14.Name = "label14";
+            this.label14.Padding = new System.Windows.Forms.Padding(17, 0, 0, 0);
+            this.label14.Size = new System.Drawing.Size(133, 18);
+            this.label14.TabIndex = 7;
+            this.label14.Text = "Weight: 80 kg";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label15.Location = new System.Drawing.Point(0, 0);
+            this.label15.Name = "label15";
+            this.label15.Padding = new System.Windows.Forms.Padding(17, 0, 0, 0);
+            this.label15.Size = new System.Drawing.Size(161, 18);
+            this.label15.TabIndex = 6;
+            this.label15.Text = "Code Status: Full";
+            // 
+            // panel10
+            // 
+            this.panel10.Controls.Add(this.label16);
+            this.panel10.Controls.Add(this.label18);
+            this.panel10.Controls.Add(this.label23);
+            this.panel10.Controls.Add(this.label24);
+            this.panel10.Controls.Add(this.label25);
+            this.panel10.Controls.Add(this.comboBox1);
+            this.panel10.Controls.Add(this.label26);
+            this.panel10.Controls.Add(this.label27);
+            this.panel10.Controls.Add(this.label28);
+            this.panel10.Controls.Add(this.label29);
+            this.panel10.Controls.Add(this.label30);
+            this.panel10.Controls.Add(this.label31);
+            this.panel10.Location = new System.Drawing.Point(479, 6);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(620, 49);
+            this.panel10.TabIndex = 14;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(38, 23);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(28, 18);
+            this.label16.TabIndex = 9;
+            this.label16.Text = "10";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(115, 23);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(24, 18);
+            this.label18.TabIndex = 10;
+            this.label18.Text = "M";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(189, 23);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(68, 18);
+            this.label23.TabIndex = 9;
+            this.label23.Text = "Dr. Bob";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(294, 23);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(68, 18);
+            this.label24.TabIndex = 8;
+            this.label24.Text = "Dr. Bob";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(423, 23);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(79, 18);
+            this.label25.TabIndex = 7;
+            this.label25.Text = "Sickness";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Peanuts",
+            "Gluten"});
+            this.comboBox1.Location = new System.Drawing.Point(534, 20);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(83, 26);
+            this.comboBox1.TabIndex = 6;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label26.Location = new System.Drawing.Point(502, 0);
+            this.label26.Name = "label26";
+            this.label26.Padding = new System.Windows.Forms.Padding(37, 0, 0, 0);
+            this.label26.Size = new System.Drawing.Size(117, 18);
+            this.label26.TabIndex = 5;
+            this.label26.Text = "Allergies:";
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label27.Location = new System.Drawing.Point(373, 0);
+            this.label27.Name = "label27";
+            this.label27.Padding = new System.Windows.Forms.Padding(37, 0, 0, 0);
+            this.label27.Size = new System.Drawing.Size(129, 18);
+            this.label27.TabIndex = 4;
+            this.label27.Text = "Diagnosis:";
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label28.Location = new System.Drawing.Point(257, 0);
+            this.label28.Name = "label28";
+            this.label28.Padding = new System.Windows.Forms.Padding(37, 0, 0, 0);
+            this.label28.Size = new System.Drawing.Size(116, 18);
+            this.label28.TabIndex = 3;
+            this.label28.Text = "Provider:";
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label29.Location = new System.Drawing.Point(157, 0);
+            this.label29.Name = "label29";
+            this.label29.Padding = new System.Windows.Forms.Padding(37, 0, 0, 0);
+            this.label29.Size = new System.Drawing.Size(100, 18);
+            this.label29.TabIndex = 2;
+            this.label29.Text = "MRN#:";
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label30.Location = new System.Drawing.Point(79, 0);
+            this.label30.Name = "label30";
+            this.label30.Padding = new System.Windows.Forms.Padding(37, 0, 0, 0);
+            this.label30.Size = new System.Drawing.Size(78, 18);
+            this.label30.TabIndex = 1;
+            this.label30.Text = "Sex:";
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label31.Location = new System.Drawing.Point(0, 0);
+            this.label31.Name = "label31";
+            this.label31.Padding = new System.Windows.Forms.Padding(36, 0, 0, 0);
+            this.label31.Size = new System.Drawing.Size(79, 18);
+            this.label31.TabIndex = 0;
+            this.label31.Text = "Age:";
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Font = new System.Drawing.Font("Lucida Sans", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label32.Location = new System.Drawing.Point(370, 72);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(83, 13);
+            this.label32.TabIndex = 16;
+            this.label32.Text = "11/11/2023";
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Location = new System.Drawing.Point(383, 6);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(90, 18);
+            this.label33.TabIndex = 12;
+            this.label33.Text = "Admission";
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Font = new System.Drawing.Font("Lucida Sans", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label34.Location = new System.Drawing.Point(367, 59);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(39, 13);
+            this.label34.TabIndex = 15;
+            this.label34.Text = "DOB:";
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Location = new System.Drawing.Point(370, 24);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(103, 18);
+            this.label35.TabIndex = 13;
+            this.label35.Text = "Information";
+            // 
+            // Continuous
+            // 
+            this.Continuous.Controls.Add(this.dataGridView2);
+            this.Continuous.Location = new System.Drawing.Point(4, 27);
+            this.Continuous.Name = "Continuous";
+            this.Continuous.Padding = new System.Windows.Forms.Padding(3);
+            this.Continuous.Size = new System.Drawing.Size(1719, 677);
+            this.Continuous.TabIndex = 2;
+            this.Continuous.Text = "Continuous";
+            this.Continuous.UseVisualStyleBackColor = true;
+            // 
+            // PRNTab
+            // 
+            this.PRNTab.Controls.Add(this.dataGridView1);
+            this.PRNTab.Location = new System.Drawing.Point(4, 27);
+            this.PRNTab.Name = "PRNTab";
+            this.PRNTab.Padding = new System.Windows.Forms.Padding(3);
+            this.PRNTab.Size = new System.Drawing.Size(1719, 677);
+            this.PRNTab.TabIndex = 1;
+            this.PRNTab.Text = "PRN";
+            this.PRNTab.UseVisualStyleBackColor = true;
+            // 
+            // Scheduled
+            // 
+            this.Scheduled.Controls.Add(this.GV_MARScheduled);
+            this.Scheduled.Location = new System.Drawing.Point(4, 27);
+            this.Scheduled.Name = "Scheduled";
+            this.Scheduled.Padding = new System.Windows.Forms.Padding(3);
+            this.Scheduled.Size = new System.Drawing.Size(1719, 677);
+            this.Scheduled.TabIndex = 0;
+            this.Scheduled.Text = "Scheduled";
+            this.Scheduled.UseVisualStyleBackColor = true;
+            // 
+            // GV_MARScheduled
+            // 
+            this.GV_MARScheduled.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GV_MARScheduled.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Action,
+            this.RN_Initials,
+            this.Date_Given,
+            this.Time_Given});
+            this.GV_MARScheduled.Location = new System.Drawing.Point(76, 51);
+            this.GV_MARScheduled.Name = "GV_MARScheduled";
+            this.GV_MARScheduled.Size = new System.Drawing.Size(1581, 575);
+            this.GV_MARScheduled.TabIndex = 0;
+            this.GV_MARScheduled.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // PRN
+            // 
+            this.PRN.Controls.Add(this.Scheduled);
+            this.PRN.Controls.Add(this.PRNTab);
+            this.PRN.Controls.Add(this.Continuous);
+            this.PRN.Location = new System.Drawing.Point(8, 91);
+            this.PRN.Name = "PRN";
+            this.PRN.SelectedIndex = 0;
+            this.PRN.Size = new System.Drawing.Size(1727, 708);
+            this.PRN.TabIndex = 20;
+            // 
+            // Action
+            // 
+            this.Action.HeaderText = "Action";
+            this.Action.Name = "Action";
+            // 
+            // RN_Initials
+            // 
+            this.RN_Initials.HeaderText = "RN Initials";
+            this.RN_Initials.Name = "RN_Initials";
+            // 
+            // Date_Given
+            // 
+            this.Date_Given.HeaderText = "Date Given";
+            this.Date_Given.Name = "Date_Given";
+            // 
+            // Time_Given
+            // 
+            this.Time_Given.HeaderText = "Time Given";
+            this.Time_Given.Name = "Time_Given";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4});
+            this.dataGridView1.Location = new System.Drawing.Point(69, 51);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(1581, 575);
+            this.dataGridView1.TabIndex = 1;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.HeaderText = "Action";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.HeaderText = "RN Initials";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.HeaderText = "Date Given";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.HeaderText = "Time Given";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn8});
+            this.dataGridView2.Location = new System.Drawing.Point(69, 51);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(1581, 575);
+            this.dataGridView2.TabIndex = 1;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.HeaderText = "Action";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.HeaderText = "RN Initials";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.HeaderText = "Date Given";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.HeaderText = "Time Given";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
             // 
             // Form_Home
             // 
@@ -896,6 +1332,19 @@ namespace WindowsFormsApp1
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.MAR.ResumeLayout(false);
+            this.MAR.PerformLayout();
+            this.panel9.ResumeLayout(false);
+            this.panel9.PerformLayout();
+            this.panel10.ResumeLayout(false);
+            this.panel10.PerformLayout();
+            this.Continuous.ResumeLayout(false);
+            this.PRNTab.ResumeLayout(false);
+            this.Scheduled.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.GV_MARScheduled)).EndInit();
+            this.PRN.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -972,5 +1421,46 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Label IllnessHistory;
         private System.Windows.Forms.Button EditButton;
         private System.Windows.Forms.Button Add;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.TabControl PRN;
+        private System.Windows.Forms.TabPage Scheduled;
+        private System.Windows.Forms.DataGridView GV_MARScheduled;
+        private System.Windows.Forms.TabPage PRNTab;
+        private System.Windows.Forms.TabPage Continuous;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Action;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RN_Initials;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Date_Given;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Time_Given;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
     }
 }

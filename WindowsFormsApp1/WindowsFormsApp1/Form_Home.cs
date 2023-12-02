@@ -19,11 +19,6 @@ namespace WindowsFormsApp1
             Application.Exit();
         }
 
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void Notes_Click(object sender, EventArgs e)
         {          
             if (editEnabled)
@@ -124,6 +119,15 @@ namespace WindowsFormsApp1
             }
         }
 
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+        }
+
         private void panel6_Paint(object sender, PaintEventArgs e)
         {
 
@@ -167,10 +171,13 @@ namespace WindowsFormsApp1
             {
                 EditButton.Enabled = false;
                 Add.Enabled = false;
+                GV_MARScheduled.ReadOnly = true;
+                GV_MARScheduled.AllowUserToAddRows = false;
             }
             else if (this.isProvider)
             {
                 EditButton.Enabled = false;
+                GV_MARScheduled.AllowUserToDeleteRows = false;
             }
         }
 
