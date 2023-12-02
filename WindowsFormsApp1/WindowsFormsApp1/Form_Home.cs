@@ -12,59 +12,21 @@ namespace WindowsFormsApp1
 {
     public partial class Form_Home : Form
     {
-        public Form_Home()
+        private bool isStudent, isProvider, isSuper;
+
+        private void Form_Home_FormClosing(object sender, FormClosingEventArgs e)
         {
+            Application.Exit();
+        }
+
+        public Form_Home(bool isStudent, bool isProvider, bool isSuper) {
             InitializeComponent();
-
-        }
-
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
+            this.isStudent = isStudent;
+            this.isProvider = isProvider;
+            this.isSuper = isSuper;
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tabPage5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label42_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tabPage4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label4_Click_1(object sender, EventArgs e)
         {
 
         }
