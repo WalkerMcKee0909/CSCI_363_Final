@@ -44,3 +44,5 @@ C:\Users\wemmc\Desktop\CSCI_363_Final-main\WindowsFormsApp1\WindowsFormsApp1\obj
 C:\Users\wemmc\Desktop\CSCI_363_Final-main\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
 C:\Users\wemmc\Desktop\CSCI_363_Final-main\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form_Edit_TxtBx.resources
 C:\Users\wemmc\Desktop\CSCI_363_Final-main\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form_Add_TxtBx.resources
+D:\Documents\School\CSCI 363\CSCI_363_Final\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form_Add_TxtBx.resources
+D:\Documents\School\CSCI 363\CSCI_363_Final\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form_Edit_TxtBx.resources

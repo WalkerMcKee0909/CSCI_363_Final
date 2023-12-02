@@ -25,14 +25,14 @@ namespace WindowsFormsApp1 {
 
 
 
-            if(student.IsMatch(textBox1.Text)) {
+            if(student.IsMatch(usernameField.Text)) {
                 isStudent = true;
-            } else if(provider.IsMatch(textBox1.Text)) {
+            } else if(provider.IsMatch(usernameField.Text)) {
                 isProvider = true;
-            } else if(super.IsMatch(textBox1.Text)) {
+            } else if(super.IsMatch(usernameField.Text)) {
                 isSuper = true;
             } else {
-                textBox1.BackColor = Color.LightCoral;
+                usernameField.BackColor = Color.LightCoral;
                 return;
             }
 
@@ -41,19 +41,33 @@ namespace WindowsFormsApp1 {
             this.Hide();
         }
 
+        private void showButton_Click(object sender, EventArgs e) {
+            if(passwordField.PasswordChar == '*') {
+                passwordField.PasswordChar = '\0';
+                hideButton.BringToFront();
+            }
+        }
+
+        private void hideButton_Click(object sender, EventArgs e) {
+            if(passwordField.PasswordChar == '\0') {
+                passwordField.PasswordChar = '*';
+                showButton.BringToFront();
+            }
+        }
+
         private void textBox1_TextChanged(object sender, EventArgs e) {
-            if(textBox1.BackColor == Color.LightCoral) {
-                textBox1.BackColor = SystemColors.Window;
+            if(usernameField.BackColor == Color.LightCoral) {
+                usernameField.BackColor = SystemColors.Window;
             }
 
-            if(!string.IsNullOrEmpty(textBox2.Text)) {
-                button1.Enabled = true;
+            if(!string.IsNullOrEmpty(passwordField.Text)) {
+                loginButton.Enabled = true;
             }
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e) {
-            if(!string.IsNullOrEmpty(textBox1.Text)) {
-                button1.Enabled = true;
+            if(!string.IsNullOrEmpty(usernameField.Text)) {
+                loginButton.Enabled = true;
             }
         }
     }
