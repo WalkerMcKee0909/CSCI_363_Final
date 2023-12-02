@@ -163,6 +163,11 @@ namespace WindowsFormsApp1
             this.Hide();
         }
 
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
         private void panel6_Paint(object sender, PaintEventArgs e)
         {
 
@@ -206,10 +211,12 @@ namespace WindowsFormsApp1
             {
                 EditButton.Enabled = false;
                 Add.Enabled = false;
+                dataGridView1.ReadOnly = true;
             }
             else if (this.isProvider)
             {
                 EditButton.Enabled = false;
+                dataGridView1.AllowUserToDeleteRows = false;
             }
         }
 
