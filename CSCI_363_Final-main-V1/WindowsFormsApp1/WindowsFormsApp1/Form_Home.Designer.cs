@@ -39,6 +39,8 @@ namespace WindowsFormsApp1
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.Add = new System.Windows.Forms.Button();
+            this.EditButton = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -98,8 +100,8 @@ namespace WindowsFormsApp1
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.MAR = new System.Windows.Forms.TabPage();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.EditButton = new System.Windows.Forms.Button();
-            this.Add = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.Tab_Home.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -133,6 +135,7 @@ namespace WindowsFormsApp1
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.button1);
             this.tabPage1.Controls.Add(this.label3);
             this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.textBox2);
@@ -171,6 +174,7 @@ namespace WindowsFormsApp1
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(163, 26);
             this.textBox2.TabIndex = 4;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // textBox1
             // 
@@ -178,6 +182,7 @@ namespace WindowsFormsApp1
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(163, 26);
             this.textBox1.TabIndex = 3;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label1
             // 
@@ -215,6 +220,26 @@ namespace WindowsFormsApp1
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Summary";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // Add
+            // 
+            this.Add.Location = new System.Drawing.Point(1402, 24);
+            this.Add.Name = "Add";
+            this.Add.Size = new System.Drawing.Size(115, 48);
+            this.Add.TabIndex = 11;
+            this.Add.Text = "Add";
+            this.Add.UseVisualStyleBackColor = true;
+            this.Add.Click += new System.EventHandler(this.Add_Click);
+            // 
+            // EditButton
+            // 
+            this.EditButton.Location = new System.Drawing.Point(1539, 24);
+            this.EditButton.Name = "EditButton";
+            this.EditButton.Size = new System.Drawing.Size(115, 48);
+            this.EditButton.TabIndex = 10;
+            this.EditButton.Text = "Edit";
+            this.EditButton.UseVisualStyleBackColor = true;
+            this.EditButton.Click += new System.EventHandler(this.button1_Click);
             // 
             // tabControl1
             // 
@@ -840,31 +865,33 @@ namespace WindowsFormsApp1
             this.MAR.Text = "MAR";
             this.MAR.UseVisualStyleBackColor = true;
             // 
-            // EditButton
+            // button1
             // 
-            this.EditButton.Location = new System.Drawing.Point(1539, 24);
-            this.EditButton.Name = "EditButton";
-            this.EditButton.Size = new System.Drawing.Size(115, 48);
-            this.EditButton.TabIndex = 10;
-            this.EditButton.Text = "Edit";
-            this.EditButton.UseVisualStyleBackColor = true;
-            this.EditButton.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Enabled = false;
+            this.button1.Location = new System.Drawing.Point(848, 349);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "Search";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
-            // Add
+            // button2
             // 
-            this.Add.Location = new System.Drawing.Point(1402, 24);
-            this.Add.Name = "Add";
-            this.Add.Size = new System.Drawing.Size(115, 48);
-            this.Add.TabIndex = 11;
-            this.Add.Text = "Add";
-            this.Add.UseVisualStyleBackColor = true;
-            this.Add.Click += new System.EventHandler(this.Add_Click);
+            this.button2.Location = new System.Drawing.Point(12, 12);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "Sign Out";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Form_Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1751, 914);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.Tab_Home);
             this.Name = "Form_Home";
             this.Text = "Form1";
@@ -972,5 +999,7 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Label IllnessHistory;
         private System.Windows.Forms.Button EditButton;
         private System.Windows.Forms.Button Add;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }

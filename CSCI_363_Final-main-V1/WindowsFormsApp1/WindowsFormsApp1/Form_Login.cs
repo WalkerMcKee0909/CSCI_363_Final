@@ -41,6 +41,24 @@ namespace WindowsFormsApp1 {
             this.Hide();
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if(textBox2.PasswordChar == '\0')
+            {
+                textBox2.PasswordChar = '*';
+                button3.BringToFront();
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if(textBox2.PasswordChar == '*')
+            {
+                textBox2.PasswordChar = '\0';
+                button2.BringToFront();
+            }
+        }
+
         private void textBox1_TextChanged(object sender, EventArgs e) {
             if(textBox1.BackColor == Color.LightCoral) {
                 textBox1.BackColor = SystemColors.Window;
