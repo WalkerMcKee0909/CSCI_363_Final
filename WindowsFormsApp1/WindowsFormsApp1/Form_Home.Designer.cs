@@ -153,7 +153,6 @@ namespace WindowsFormsApp1
             this.label3.Size = new System.Drawing.Size(55, 18);
             this.label3.TabIndex = 6;
             this.label3.Text = "Name";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label2
             // 
@@ -186,7 +185,6 @@ namespace WindowsFormsApp1
             this.label1.Size = new System.Drawing.Size(166, 18);
             this.label1.TabIndex = 2;
             this.label1.Text = "Patient Information";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // pictureBox1
             // 
@@ -531,7 +529,6 @@ namespace WindowsFormsApp1
             this.tabPage5.TabIndex = 1;
             this.tabPage5.Text = "History";
             this.tabPage5.UseVisualStyleBackColor = true;
-            this.tabPage5.Click += new System.EventHandler(this.tabPage5_Click);
             // 
             // label45
             // 
@@ -576,7 +573,6 @@ namespace WindowsFormsApp1
             this.label42.Size = new System.Drawing.Size(91, 24);
             this.label42.TabIndex = 20;
             this.label42.Text = "History of Present Illness";
-            this.label42.Click += new System.EventHandler(this.label42_Click);
             // 
             // textBox8
             // 
@@ -868,6 +864,7 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.Tab_Home);
             this.Name = "Form_Home";
             this.Text = "Form1";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form_Home_FormClosing);
             this.Tab_Home.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
