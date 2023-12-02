@@ -12,9 +12,12 @@ namespace WindowsFormsApp1
 {
     public partial class Form_Home : Form
     {
-        public Form_Home()
+        private bool isAdmin;
+
+        public Form_Home(bool isAdmin)
         {
             InitializeComponent();
+            this.isAdmin = isAdmin;
 
         }
 
