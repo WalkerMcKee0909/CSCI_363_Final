@@ -124,6 +124,45 @@ namespace WindowsFormsApp1
             }
         }
 
+        private void button1_Click_1(object sender, EventArgs e) {
+            if(!string.IsNullOrEmpty(textBox1.Text) || !string.IsNullOrEmpty(textBox2.Text)) {
+                return;
+            }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            if(!button1.Enabled)
+            {
+                button1.Enabled = true;
+            }
+
+            if(string.IsNullOrEmpty(textBox1.Text) && string.IsNullOrEmpty(textBox2.Text))
+            {
+                button1.Enabled = false;
+            }
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+            if(!button1.Enabled)
+            {
+                button1.Enabled = true;
+            }
+
+            if(string.IsNullOrEmpty(textBox1.Text) && string.IsNullOrEmpty(textBox2.Text))
+            {
+                button1.Enabled = false;
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form_Login form = new Form_Login();
+            form.Show();
+            this.Hide();
+        }
+
         private void panel6_Paint(object sender, PaintEventArgs e)
         {
 
